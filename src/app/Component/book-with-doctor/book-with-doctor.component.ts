@@ -4,8 +4,7 @@ import { Doctor } from "../../../app/Models/doctor";
 import { Review } from "../../../app/Models/review";
 import { DoctorsService } from "../../../app/Services/doctors.service";
 import { ReviewsService } from "../../../app/Services/reviews.service";
-import { DoctorService } from "src/app/Services/doctor.service";
-import { AppointmentsComponent } from "../search_doctors/appointments_tables/appointments/appointments.component";
+
 @Component({
   selector: "app-book-with-doctor",
   templateUrl: "./book-with-doctor.component.html",
@@ -26,13 +25,9 @@ export class BookWithDoctorComponent implements OnInit {
     private httpClient: HttpClient,
     private doctorService: DoctorsService,
     private reviewsService: ReviewsService
-
-
   ) {}
  
-
   ngOnInit(): void {
-    
     this.getDoctorByID();
     this.getOverAllRating();
 
@@ -45,18 +40,18 @@ export class BookWithDoctorComponent implements OnInit {
   }
   getDoctorByID() {
     this.doctorService.getDoctorWithID(this.cardDoctorId).subscribe(
-      (doctor:any) => {
+      (doctor) => {
         this.doctor = doctor;
       },
-      (err:any) => console.log("HTTP Error", err),
+      (err) => console.log("HTTP Error", err),
       () => console.log("HTTP request completed.")
     );
   }
   getOverAllRating() {
     this.reviewsService.getReviewByDoctorID(this.cardDoctorId).subscribe(
-      (review:any) => {
+      (review) => {
        let total=0
-        review.forEach((revRate:any)=>{
+        review.forEach((revRate)=>{
           total += revRate.rating
           this.totalRate =total/ review.length;
           

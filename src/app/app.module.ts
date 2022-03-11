@@ -59,6 +59,8 @@ import { ConfirmAppointmentComponent } from './Component/search_doctors/confirmA
 import { LandingPageComponent } from './Component/Landing-page/landing_page/landing-page/landing-page.component';
 import { BookingPageComponent } from './Component/book-with-doctor/booking_page/booking-page/booking-page.component';
 import { UsersignupComponent } from './usersignup/usersignup.component';
+import { AdminLoginComponent } from './Component/Admin/admin-login/admin-login.component';
+import { SignInComponent } from './Component/sign-in/sign-in.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -100,6 +102,8 @@ import { UsersignupComponent } from './usersignup/usersignup.component';
      LandingPageComponent,
      BookingPageComponent,
      UsersignupComponent,
+     AdminLoginComponent,
+     SignInComponent,
   ],
   imports: [
     BrowserModule,
