@@ -229,11 +229,12 @@
             </div>
           </div>
 
-          <app-review id="reviews" *ngIf="showAllReviews"></app-review>
+          <app-review id="reviews" *ngIf="showAllReviews" [DoctorId]="cardDoctorId"></app-review>
           <button
             class="showReviews btn btn-primary d-flex my-3"
             *ngIf="!showAllReviews"
             (click)="showReviews()"
+           
           >
             Show all reviews
           </button>

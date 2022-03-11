@@ -27,6 +27,7 @@ import { UsersignupComponent } from './usersignup/usersignup.component';
 import { AdminDashboardComponent } from './Component/Admin/admin-dashboard/admin-dashboard.component';
 import { AdminLoginComponent } from './Component/Admin/admin-login/admin-login.component';
 import { AuthGuard } from './Gaurds/auth.guard';
+import { ReviewComponent } from './Component/Review/review/review.component';
 export const routes: Routes = [
 
   {path:'', component: MainLandingPageComponent},
@@ -34,6 +35,7 @@ export const routes: Routes = [
   {path: 'AboutUs', redirectTo: '/Home#aboutUs'},
   {path: 'Service', redirectTo: '/Home#service'},
   {path: 'booking/:id', component:BookWithDoctorComponent},
+  {path: 'booking/:id/reviews/:id', component:ReviewComponent},
   {path: 'Search', component:SearchPageComponent},
 
 
