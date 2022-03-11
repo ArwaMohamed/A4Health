@@ -58,6 +58,7 @@ import { AppointmentsComponent } from './Component/search_doctors/appointments_t
 import { ConfirmAppointmentComponent } from './Component/search_doctors/confirmAppointment/confirm-appointment/confirm-appointment.component';
 import { LandingPageComponent } from './Component/Landing-page/landing_page/landing-page/landing-page.component';
 import { BookingPageComponent } from './Component/book-with-doctor/booking_page/booking-page/booking-page.component';
+import { UsersignupComponent } from './usersignup/usersignup.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -98,6 +99,7 @@ import { BookingPageComponent } from './Component/book-with-doctor/booking_page/
      ConfirmAppointmentComponent,
      LandingPageComponent,
      BookingPageComponent,
+     UsersignupComponent,
   ],
   imports: [
     BrowserModule,

@@ -23,6 +23,7 @@ import { MainLandingPageComponent } from './Component/Landing-page/main-landing-
 import { SearchPageComponent } from './Component/search_doctors/main/search_page/search-page/search-page.component';
 import { LandingPageComponent } from './Component/Landing-page/landing_page/landing-page/landing-page.component';
 import { BookingPageComponent } from './Component/book-with-doctor/booking_page/booking-page/booking-page.component';
+import { UsersignupComponent } from './usersignup/usersignup.component';
 export const routes: Routes = [
 
   {path:'', component: MainLandingPageComponent},
@@ -38,6 +39,8 @@ export const routes: Routes = [
     {path:'manageprofile' , component:UserManageProfileComponent},
     {path:'changepassword' , component:UserChangePasswordComponent},
        ]},
+       {path:'signup',component:UsersignupComponent},
+
   {path:'doctordashboard' , component:DoctorDashboardComponent , children:[
     {path:'profile' , component:DoctorProfileComponent},
     {path:'editprofile' , component:DoctorEditProfileComponent},
