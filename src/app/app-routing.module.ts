@@ -28,6 +28,8 @@ import { AdminDashboardComponent } from './Component/Admin/admin-dashboard/admin
 import { AdminLoginComponent } from './Component/Admin/admin-login/admin-login.component';
 import { AuthGuard } from './Gaurds/auth.guard';
 import { ReviewComponent } from './Component/Review/review/review.component';
+import { UsergGuard } from './userguard/userg.guard';
+import { SignInComponent } from './Component/sign-in/sign-in.component';
 export const routes: Routes = [
 
   {path:'', component: MainLandingPageComponent},
@@ -39,14 +41,16 @@ export const routes: Routes = [
   {path: 'Search', component:SearchPageComponent},
 
 
-  {path:'userdashboard' , component:UserDashboardComponent , children:[
+  {path:'userdashboard' ,canActivate:[UsergGuard], component:UserDashboardComponent , children:[
     {path:'reservations' , component:UserReservationsComponent},
     {path:'manageprofile' , component:UserManageProfileComponent},
     {path:'changepassword' , component:UserChangePasswordComponent},
        ]},
        {path:'signup',component:UsersignupComponent},
+       {path:'signin',component:SignInComponent},
 
-  {path:'doctordashboard',canActivate:[AuthGuard]  ,component:DoctorDashboardComponent , children:[
+
+  {path:'doctordashboard',canActivate:[UsergGuard]  ,component:DoctorDashboardComponent , children:[
     {path:'profile' , component:DoctorProfileComponent},
     {path:'editprofile' , component:DoctorEditProfileComponent},
     {path:'appointment' , component:DoctorAppiontmentComponent},
